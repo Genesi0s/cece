@@ -2,7 +2,7 @@
 
 # Cece Docs
 
-Documentation test du projet **cece** — environnement personnel, outils et services.
+Environnement personnel, outils et services.
 
 </div>
 
