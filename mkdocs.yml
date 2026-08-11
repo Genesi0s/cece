@@ -1,10 +1,10 @@
 site_name: Cece Docs
-site_url: https://Geesi0s.github.io/cece/
+site_url: https://genesi0s.github.io/cece/
 site_description: Documentation du projet cece
 site_author: Cedric
 
-repo_name: Genesi0s/documentation
-repo_url: https://github.com/Genesi0s/documentation
+repo_name: Genesi0s/cece
+repo_url: https://github.com/Genesi0s/cece
 
 docs_dir: docs
 
