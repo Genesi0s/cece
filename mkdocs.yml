@@ -1,0 +1,57 @@
+site_name: Cece Docs
+site_url: https://USERNAME.github.io/cece/
+site_description: Documentation du projet cece
+site_author: Cedric
+
+repo_name: USERNAME/cece
+repo_url: https://github.com/USERNAME/cece
+
+docs_dir: docs
+theme:
+  name: material
+  language: fr
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Passer en mode sombre
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Passer en mode clair
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: fr
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+
+nav:
+  - Accueil: index.md
+  - Metrics:
+      - Présentation: metrics/index.md
+      - Backend: metrics/backend.md
+      - Frontend: metrics/frontend.md
+  - Infrastructure:
+      - Ansible: infra/ansible.md
+      - Monitoring: infra/monitoring.md
