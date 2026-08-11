@@ -1,43 +1,89 @@
 :root {
-  --md-primary-fg-color: #5c6bc0;
-  --md-accent-fg-color: #7c4dff;
+  --md-primary-fg-color:        #5c6bc0;
+  --md-primary-fg-color--light: #7986cb;
+  --md-primary-fg-color--dark:  #3949ab;
+  --md-primary-bg-color:        #fff;
+  --md-accent-fg-color:         #7c4dff;
 }
 
-/* Hero section sur l'index */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #7986cb;
+  --md-hue:                     232;
+}
+
+/* ── Hero ─────────────────────────────────────────── */
 .hero {
-  padding: 3rem 0 2rem;
+  padding: 4rem 1rem 2.5rem;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, #5c6bc0, #7c4dff);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #5c6bc0 0%, #7c4dff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-bottom: 0.5rem;
 }
 
-/* Cards plus arrondies */
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.75;
+  max-width: 520px;
+  margin: 0 auto 0.5rem;
+}
+
+/* ── Cards ────────────────────────────────────────── */
 .md-typeset .grid.cards > ul > li,
 .md-typeset .grid.cards > ol > li {
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--md-default-fg-color--lightest);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  padding: 1.25rem;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
 }
 
 .md-typeset .grid.cards > ul > li:hover,
 .md-typeset .grid.cards > ol > li:hover {
-  box-shadow: 0 6px 24px rgba(92, 107, 192, 0.18);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(92, 107, 192, 0.2);
+  border-color: var(--md-primary-fg-color--light);
+  transform: translateY(-3px);
 }
 
-/* Code blocks */
+/* icône plus grande dans les cards */
+.md-typeset .grid.cards .lg {
+  font-size: 2rem;
+}
+
+/* ── Code ─────────────────────────────────────────── */
 .md-typeset pre {
   border-radius: 10px;
 }
 
-/* Navigation tabs */
+/* ── Header & tabs ────────────────────────────────── */
+.md-header {
+  backdrop-filter: blur(8px);
+  background-color: color-mix(in srgb, var(--md-primary-fg-color) 92%, transparent);
+}
+
 .md-tabs__link {
   font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  opacity: 1;
+}
+
+/* ── Sidebar ──────────────────────────────────────── */
+.md-nav__title {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ── Footer ───────────────────────────────────────── */
+.md-footer {
+  margin-top: 2rem;
 }
